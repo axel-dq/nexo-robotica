@@ -1,4 +1,11 @@
+"use client";
+
 import "./globals.css";
+import { aeonik } from "./fonts";
+import whatsapp from "@assets/images/whatsapp.svg";
+import logo from "@assets/images/logo.svg";
+import logoWhite from "@assets/images/logo-white.svg";
+import Image from "next/image";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -6,13 +13,39 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
       </head>
-      <body>
-        <header className="flex flex-col items-center justify-center gap-2 p-4 bg-gray-800 text-white">
-          <span>Nexo Robótica</span>
-          <span>Ingeniería · Tecnología · Estrategia</span>
-        </header>
-        <main className="flex-1 p-4">
+      <body className={`m-0 p-0 ${aeonik.variable}`}>
+        <main className="flex-1">
           {children}
+          <footer className="flex flex-col items-center justify-center gap-4 pt-10 text-nexo-white bg-black">
+            <div id="footer-social-media" className="flex items-center justify-center gap-4 self-end h-10 mr-20">
+              <a href="#" target="_blank" rel="noopener noreferrer" className="h-full">
+                <Image src={whatsapp} alt="WhatsApp" className="h-full w-auto" />
+              </a>
+            </div>
+            <div className="flex items-center justify-center gap-40 w-full pb-20">
+              <Image src={logoWhite} alt="Logo" className="h-auto w-50" />
+              <div>
+                <h2 className="font-bold mb-5 text-xl">Servicios</h2>
+                <ul className="list-none flex flex-col gap-2">
+                  <li className="text-nexo-white/50"><a href="#">Infraestructura, Telecomunicaciones y Tecnología (IT & OT)</a></li>
+                  <li className="text-nexo-white/50"><a href="#">Desarrollo y Soluciones Digitales</a></li>
+                  <li className="text-nexo-white/50"><a href="#">Consultoría y Asesoramiento Legal</a></li>
+                </ul>
+              </div>
+              <div>
+                <h2 className="font-bold mb-5 text-xl">nexo.robórtica</h2>
+                <ul className="list-none flex flex-col gap-2">
+                  <li className="text-nexo-white/50"><a href="#">Home</a></li>
+                  <li className="text-nexo-white/50"><a href="#">Quienes somos</a></li>
+                  <li className="text-nexo-white/50"><a href="#">Servicios</a></li>
+                  <li className="text-nexo-white/50"><a href="#">Contactos</a></li>
+                </ul>
+              </div>
+            </div>
+            <div className="bg-nexo-white w-full p-20">
+              <Image src={logo} alt="Logo" className="h-auto w-1/4 mx-auto" />
+            </div>
+          </footer>
         </main>
       </body>
     </html>

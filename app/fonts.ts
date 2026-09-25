@@ -1,0 +1,38 @@
+// app/fonts.ts
+import localFont from 'next/font/local';
+
+export const aeonik = localFont({
+    src: [
+        {
+            path: '../public/fonts/Aeonik-Thin.ttf',
+            weight: '100',
+            style: 'normal',
+        },
+        {
+            path: '../public/fonts/Aeonik-Air.ttf',
+            weight: '200',
+            style: 'normal',
+        },
+        {
+            path: '../public/fonts/Aeonik-Regular.ttf',
+            weight: '400',
+            style: 'normal',
+        },
+        {
+            path: '../public/fonts/Aeonik-Medium.ttf',
+            weight: '500',
+            style: 'normal',
+        },
+        {
+            path: '../public/fonts/Aeonik-Bold.ttf',
+            weight: '700',
+            style: 'normal',
+        },
+        {
+            path: '../public/fonts/Aeonik-Black.ttf',
+            weight: '900',
+            style: 'normal',
+        },
+    ],
+    variable: '--font-aeonik',
+});

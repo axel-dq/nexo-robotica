@@ -1,64 +1,20 @@
-.text-underline-anim {
-    -webkit-text-stroke: 1rem #111411;
-    paint-order: stroke fill;
-    animation: underline-anim 1s forwards;
-    animation-delay: 0.5s;
-
-    background-repeat: no-repeat;
-    background-size: 0 5px;
+#lava-lamp .bubble {
+    position: absolute;
+    bottom: 0;
+    aspect-ratio: 1;
 }
 
-@keyframes underline-anim {
-    from {
-        background-size: 0 5px;
-        background-position: left 90%;
-    }
-
-    to {
-        background-size: 100% 5px;
-        background-position: left 90%;
-    }
+#lava-lamp::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(20px);
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 1) 30%);
+    z-index: 10;
 }
 
-
-#argentina-container {
-    background-image: url('../assets/argentina.svg');
-    background-repeat: no-repeat;
-    background-size: auto 90%;
+#home {
+    background-image: url("../assets/images/background.webp");
+    background-size: cover;
     background-position: center;
-    overflow: visible;
-}
-
-
-#selected {
-    animation: showSelected 0.5s ease-in-out forwards;
-}
-
-#selected.remove {
-    animation: hideSelected 0.5s ease-in-out forwards;
-}
-
-@keyframes showSelected {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-@keyframes hideSelected {
-    from {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    to {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
 }

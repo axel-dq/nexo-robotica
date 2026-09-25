@@ -10,6 +10,17 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  --color-nexo-blue-100: #5f80f0;
+  --color-nexo-blue-200: #23214e;
+  --color-nexo-purple-100: #7a41e8;
+  --color-nexo-purple-200: #2b144c;
+  --color-nexo-red-100: #ff4d4a;
+  --color-nexo-red-200: #3d0610;
+  --color-nexo-white: #f4f4f6;
+  --color-nexo-gray: #232224;
+
+  --font-aeonik: var(--font-aeonik), sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +31,5 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
