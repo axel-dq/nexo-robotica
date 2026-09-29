@@ -1,115 +1,49 @@
 'use client'
 
-import { useRef, useEffect, useState } from "react";
 import Image from "next/image";
 import "./page.css";
 import logo from "@assets/images/logo.svg";
+import whatsapp from "@assets/images/whatsapp.svg";
 
 import platformFeatures from "@assets/tsx/platforms";
 import PlaformCard from "@assets/tsx/platform_card";
 
 export default function Home() {
-  const lavaLampRef = useRef<HTMLDivElement>(null);
-  const [computedStyles, setComputedStyles] = useState<CSSStyleDeclaration | null>(null);
-
-  function randomRange(min: number, max: number) {
-    return Math.random() * (max - min) + min;
-  }
-
-  function animateBubble(bubble: HTMLDivElement) {
-    if (!computedStyles) return;
-
-    const duration = randomRange(5000, 15000);
-
-    const colors = [
-      computedStyles.getPropertyValue("--color-nexo-blue-100"),
-      computedStyles.getPropertyValue("--color-nexo-blue-200"),
-      computedStyles.getPropertyValue("--color-nexo-purple-100"),
-      computedStyles.getPropertyValue("--color-nexo-purple-200"),
-      computedStyles.getPropertyValue("--color-nexo-red-100"),
-      computedStyles.getPropertyValue("--color-nexo-red-200"),
-      computedStyles.getPropertyValue("--color-nexo-white"),
-    ];
-
-    bubble.style.width = `${randomRange(20, 70)}%`;
-    bubble.style.bottom = "150%";
-    bubble.style.left = `${randomRange(0, 100)}%`;
-    bubble.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-
-    bubble.animate([{
-      bottom: "-100%",
-      borderRadius: `${randomRange(10, 100)}% ${randomRange(10, 100)}% ${randomRange(10, 100)}% ${randomRange(10, 100)}% / ${randomRange(10, 100)}% ${randomRange(10, 100)}% ${randomRange(10, 100)}% ${randomRange(10, 100)}%`,
-    }, {
-      bottom: "150%",
-      width: `${randomRange(0, 100)}%`,
-      borderRadius: `${randomRange(10, 100)}% ${randomRange(10, 100)}% ${randomRange(10, 100)}% ${randomRange(10, 100)}% / ${randomRange(10, 100)}% ${randomRange(10, 100)}% ${randomRange(10, 100)}% ${randomRange(10, 100)}%`,
-    }], {
-      duration: duration,
-    });
-
-    setTimeout(() => {
-      animateBubble(bubble);
-    }, duration);
-  }
-
-  function animateBubbles() {
-    if (!lavaLampRef.current || !computedStyles) return;
-
-    const bubbles: NodeListOf<HTMLDivElement> = lavaLampRef.current.querySelectorAll(".bubble");
-    bubbles.forEach(async (bubble) => {
-      animateBubble(bubble);
-    })
-  }
-
-  useEffect(() => {
-    const compStyles = window.getComputedStyle(document.documentElement);
-    setComputedStyles(compStyles);
-
-  }, []);
-
-  useEffect(() => {
-    animateBubbles();
-  }, [computedStyles]);
-
   return (
     <>
-      <section id="home" className="p-15 relative bg-nexo-white z-10 font-aeonik">
-        <header className="flex items-center justify-between text-black mb-20 text-xl">
+      <a href="#" className="fixed bottom-10 right-10 size-10"><Image src={whatsapp} alt="whatsapp" /></a>
+      <section id="home" className="p-10 lg:p-15 relative bg-nexo-white z-10 font-aeonik">
+        <header className="flex flex-col lg:flex-row gap-5 items-center justify-between text-nexo-black mb-20 text-xl">
           <Image src={logo} loading="eager" alt="Logo" className="h-12 w-auto" />
-          <ul className="flex items-center gap-10 list-none">
+          <ul className="flex items-center justify-center flex-wrap gap-5 lg:gap-10 list-none">
             <li><a href="#">Nosotros</a></li>
             <li><a href="#">Servicios</a></li>
             <li><a href="#">Contacto</a></li>
-            <li className="bg-black text-white px-4 py-2 rounded-md ml-20"><a href="#">Cotización Gratis</a></li>
+            <li className="bg-nexo-black text-white px-4 py-2 rounded-md lg:ml-20"><a href="#">Cotización Gratis</a></li>
           </ul>
         </header>
-        <div className="max-w-3/5">
-          <h1 className="text-8xl font-medium mb-10">Soluciones <br className="hidden md:block" /> que conectan. <br className="hidden md:block" /> Operaciones <br /> que avanzan</h1>
-          <p className="xl:max-w-180 text-3xl">Diseñamos, protegemos y hacemos evolucionar la infraestructura que mantiene en movimiento a tu organización.</p>
+        <div className="lg:max-w-3/5">
+          <h1 className="text-3xl lg:text-8xl font-medium mb-10">Soluciones <br className="hidden md:block" /> que conectan. <br className="hidden md:block" /> Operaciones <br /> que avanzan</h1>
+          <p className="xl:max-w-180 text-xl lg:text-3xl">Diseñamos, protegemos y hacemos evolucionar la infraestructura que mantiene en movimiento a tu organización.</p>
         </div>
-        {/* <div ref={lavaLampRef} id="lava-lamp" className="absolute right-0 top-0 bottom-0 h-full w-1/2 -z-10 overflow-hidden">
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-        <div className="bubble"></div>
-      </div> */}
       </section>
-      <section className="font-aeonik p-15 bg-nexo-gray">
-        <h1 className="text-3xl font-regular text-nexo-white brightness-75 mx-auto w-fit">Nuestra Plataforma Digital</h1>
+      <section className="font-aeonik p-10 lg:p-15 bg-nexo-gray">
+        <h1 className="text-3xl font-regular text-nexo-white brightness-75 mx-auto w-fit text-center">Nuestra <br className="md:hidden" /> Plataforma Digital</h1>
         <ul className="flex flex-wrap items-center justify-center gap-10 mt-20 list-none">
           {platformFeatures.map((feature, index) => (
             <li key={index}>
-              <PlaformCard text={feature.title} logo={feature.logo} color_bottom={feature.color_bottom} color_top={feature.color_top} />
+              <a href={`/plataformas/${feature.slug}`}>
+                <PlaformCard text={feature.title} logo={feature.logo} color_bottom={feature.color_light} color_top={feature.color_dark} />
+              </a>
             </li>
           ))}
         </ul>
+      </section>
+      <section className="bg-nexo-black p-20 flex flex-col items-center justify-center gap-20">
+        <p className="text-center text-5xl lg:text-6xl font-bold bg-nexo"
+          style={{ backgroundImage: "linear-gradient(to right, var(--color-nexo-blue-100), var(--color-nexo-red-100))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
+          Hablanos de tu proyecto <br /> y como podemos acompañarte</p>
+        <a href="#" className="bg-nexo-red-100 px-10 py-5 rounded-xl text-2xl font-bold text-center">Contactanos ya</a>
       </section>
     </>
   )

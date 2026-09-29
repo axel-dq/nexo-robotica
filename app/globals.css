@@ -3,14 +3,10 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-
+  /* Defining them in the root and later referencing them in tailwind since
+  some colors are used dynamically (var(--color)) and tailwind doesn't detect that
+  and strips it away from the compiled css */
   --color-nexo-blue-100: #5f80f0;
   --color-nexo-blue-200: #23214e;
   --color-nexo-purple-100: #7a41e8;
@@ -19,6 +15,24 @@
   --color-nexo-red-200: #3d0610;
   --color-nexo-white: #f4f4f6;
   --color-nexo-gray: #232224;
+  --color-nexo-black: #242124;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-nexo-blue-100: var(--color-nexo-blue-100);
+  --color-nexo-blue-200: var(--color-nexo-blue-200);
+  --color-nexo-purple-100: var(--color-nexo-purple-100);
+  --color-nexo-purple-200: var(--color-nexo-purple-200);
+  --color-nexo-red-100: var(--color-nexo-red-100);
+  --color-nexo-red-200: var(--color-nexo-red-200);
+  --color-nexo-white: var(--color-nexo-white);
+  --color-nexo-gray: var(--color-nexo-gray);
+  --color-nexo-black: var(--color-nexo-black);
 
   --font-aeonik: var(--font-aeonik), sans-serif;
 }

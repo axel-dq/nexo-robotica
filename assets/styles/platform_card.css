@@ -1,0 +1,14 @@
+@property --top-hover {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: black;
+}
+
+.platform-card {
+    background-image: linear-gradient(to top, var(--bottom), var(--top-hover));
+    transition: --bottom-hover 0.5s ease, --top-hover 0.5s ease;
+}
+
+.platform-card:hover {
+    --top-hover: var(--top);
+}
