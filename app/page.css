@@ -1,20 +1,96 @@
-#lava-lamp .bubble {
-    position: absolute;
-    bottom: 0;
-    aspect-ratio: 1;
-}
-
-#lava-lamp::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    backdrop-filter: blur(20px);
-    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 1) 30%);
-    z-index: 10;
-}
-
 #home {
     background-image: url("../assets/images/background.webp");
     background-size: cover;
     background-position: center;
+    animation: fade-in-left-bg 2s ease-in-out;
+    background-repeat: no-repeat;
+}
+
+.move-down {
+    animation: move-down 1s ease-in-out;
+}
+
+.fade-up {
+    animation: fade-up 1s ease-in-out;
+    animation-timeline: view();
+}
+
+@keyframes fade-in-left-bg {
+    from {
+        opacity: 0;
+        background-position-x: center -5rem;
+    }
+
+    to {
+        opacity: 1;
+        background-position-x: center 0rem;
+    }
+}
+
+@keyframes move-down {
+    from {
+        transform: translateY(-3rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    75% {
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+}
+
+@property --start-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: transparent;
+}
+
+@property --end-color {
+    syntax: '<color>';
+    inherits: false;
+    initial-value: transparent;
+}
+
+#contact-msg {
+    background-image: linear-gradient(to right, var(--color-nexo-blue-100), var(--color-nexo-red-100));
+    background-clip: text;
+    color: transparent;
+
+    animation: gradient-animation 1s ease-in-out forwards;
+    animation-timeline: view();
+}
+
+@keyframes gradient-animation {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
