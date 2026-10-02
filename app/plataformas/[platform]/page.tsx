@@ -134,7 +134,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
             {
                 data.platform_description.map((desc, index) => (
                     <dialog key={index} id={`platform-dialog-${index}`}
-                        className="bg-white rounded-4xl p-10 pt-30 min-h-120 shadow-md w-9/10 md:w-1/3 max-w-200 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:blur-3xl backdrop:bg-nexo-black/30 starting:scale-0 transition-transform duration-400 scale-100 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+                        className="bg-white rounded-4xl p-10 pt-30 min-h-120 shadow-md w-9/10 md:w-1/3 max-w-200 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:blur-3xl backdrop:bg-nexo-black/30 starting:scale-0 transition-transform duration-900 scale-100 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
                         ref={addToRefs}>
                         <button className="absolute top-5 right-5 rounded-full size-10 text-nexo-white font-bold cursor-pointer" onClick={() => toogleDialog(index)} style={{ backgroundColor: `var(--${data.color_light})` }}>X</button>
                         <h1 className="text-2xl md:text-3xl font-bold mb-5 max-w-2/3">{desc.title}</h1>
