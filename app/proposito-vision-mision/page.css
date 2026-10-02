@@ -1,0 +1,17 @@
+.fade-up {
+    opacity: 0;
+    animation: fade-up 1.5s ease-in-out forwards;
+    animation-delay: calc(sibling-index() * 200ms);
+}
+
+@keyframes fade-up {
+    from {
+        transform: translateY(4rem);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

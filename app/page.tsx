@@ -16,7 +16,7 @@ export default function Home() {
         <header className="flex flex-col lg:flex-row gap-5 items-center justify-between text-nexo-black mb-20 text-xl">
           <Image src={logo} loading="eager" alt="Logo" className="h-12 w-auto move-down" />
           <ul className="flex items-center justify-center flex-wrap gap-5 lg:gap-10 list-none">
-            <li className="move-down"><a href="#">Nosotros</a></li>
+            <li className="move-down"><a href="/nosotros">Nosotros</a></li>
             <li className="move-down"><a href="#">Servicios</a></li>
             <li className="move-down"><a href="#">Contacto</a></li>
             <li className="bg-nexo-black text-white px-4 py-2 rounded-md lg:ml-20 move-down"><a href="#">Cotización Gratis</a></li>
