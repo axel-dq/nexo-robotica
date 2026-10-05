@@ -117,29 +117,31 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
                     }}
                 />
             </div>
-            <a href="/" className="block w-fit text-nexo-white ml-auto text-4xl font-bold">Home</a>
+            <a href="/#plataformas" className="block w-fit text-nexo-white ml-auto font-bold">← Volvé a plataformas</a>
             <Image src={data.logo} alt={data.title!.toString()} className="h-20 w-auto mx-auto" loading="eager" />
-            <ul className="mt-10 list-none flex flex-wrap gap-5 items-center justify-center">
+            <ul className="mt-10 list-none flex flex-wrap gap-y-20 items-center justify-center">
                 {data.platform_description.map((desc, index) => (
-                    <li key={index} className="bg-white p-10 pt-30 min-h-120 rounded-4xl shadow-md w-full md:w-1/3 max-w-120 relative">
-                        <h3 className="text-2xl md:text-3xl font-bold mb-5 w-fit mx-auto">{desc.title}</h3>
-                        <p className="text-gray-700">{desc.body}</p>
-                        <button className="rounded-full size-10 block font-bold text-nexo-white text-4xl absolute bottom-10 right-10 cursor-pointer hover:scale-125 transition-transform"
-                            style={{ backgroundColor: `var(--${data.color_light})` }} onClick={() => toogleDialog(index)}>
-                            +
-                        </button>
-                    </li>
+                    <span className="basis-1/3" key={index}>
+                        <li className="bg-white p-5 pt-30 min-h-120 rounded-4xl shadow-md relative text-balance w-4/5 mx-auto">
+                            <h3 className="text-2xl md:text-3xl font-semibold mb-5 w-fit">{desc.title}</h3>
+                            <p className="text-gray-700">{desc.body}</p>
+                            <button className="rounded-full size-10 block font-bold text-nexo-white text-4xl absolute bottom-10 right-10 cursor-pointer hover:scale-125 transition-transform"
+                                style={{ backgroundColor: `var(--${data.color_light})` }} onClick={() => toogleDialog(index)}>
+                                +
+                            </button>
+                        </li>
+                    </span>
                 ))}
             </ul>
             {
                 data.platform_description.map((desc, index) => (
                     <dialog key={index} id={`platform-dialog-${index}`}
-                        className="bg-white rounded-4xl p-10 pt-30 min-h-120 shadow-md w-9/10 md:w-1/3 max-w-200 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:blur-3xl backdrop:bg-nexo-black/30 starting:scale-0 transition-transform duration-900 scale-100 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
+                        className="bg-white rounded-4xl px-10 pt-20 py-10 min-h-90 shadow-md w-9/10 md:w-1/3 max-w-200 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:blur-3xl backdrop:bg-nexo-black/30 starting:scale-0 transition-transform duration-900 scale-100 ease-[cubic-bezier(0.34,1.56,0.64,1)]"
                         ref={addToRefs}>
-                        <button className="absolute top-5 right-5 rounded-full size-10 text-nexo-white font-bold cursor-pointer" onClick={() => toogleDialog(index)} style={{ backgroundColor: `var(--${data.color_light})` }}>X</button>
-                        <h1 className="text-2xl md:text-3xl font-bold mb-5 max-w-2/3">{desc.title}</h1>
-                        <div className="w-1/2 ml-auto">
-                            <p className="font-bold mb-10">Incluye</p>
+                        <button className="absolute top-5 right-5 rounded-full size-10 text-3xl text-nexo-white font-bold cursor-pointer border-none rotate-45" onClick={() => toogleDialog(index)} style={{ backgroundColor: `var(--${data.color_light})` }}>+</button>
+                        <h1 className="text-2xl md:text-3xl font-bold mb-10 max-w-2/3">{desc.title}</h1>
+                        <div>
+                            <p className="font-bold mb-3">Incluye</p>
                             <ul>
                                 {desc.bullets.map((bullet, bulletIndex) => (
                                     <li key={bulletIndex} className="list-disc">{bullet}</li>
