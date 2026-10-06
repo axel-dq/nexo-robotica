@@ -94,3 +94,30 @@
         opacity: 1;
     }
 }
+
+
+.appear-fade {
+    opacity: 0;
+    display: inline-block;
+    animation: appear-fade 1s ease-in-out forwards;
+    animation-delay: calc(sibling-index() * 0.2s);
+}
+
+@keyframes appear-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(-2rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.after-appear-fade {
+    opacity: 0;
+    animation: appear-fade 1s ease-in-out forwards;
+    animation-delay: 1.6s;
+}

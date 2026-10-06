@@ -28,11 +28,11 @@ export default function Home() {
         </header>
         <div className="lg:max-w-3/5">
           <h1 className="text-3xl lg:text-9xl font-medium mb-10 leading-25">
-            Conetar,<br />
-            trasformar,<br />
-            crecer.
+            <span className="appear-fade">Conetar,</span><br />
+            <span className="appear-fade">trasformar,</span><br />
+            <span className="appear-fade">crecer.</span>
           </h1>
-          <p className="xl:max-w-180 text-xl font-normal leading-tight">Diseñamos, protegemos y hacemos evolucionar <br /> la infraestructura que mantiene en movimiento <br /> a tu organización.</p>
+          <p className="xl:max-w-180 text-xl font-normal leading-tight after-appear-fade">Diseñamos, protegemos y hacemos evolucionar <br /> la infraestructura que mantiene en movimiento <br /> a tu organización.</p>
         </div>
       </section >
       <section className="font-aeonik p-10 lg:p-40 bg-nexo-white" id="plataformas">
