@@ -81,9 +81,8 @@ const platformFeatures: PlatformFeature[] = [
             ]
         }, {
             title: "Formación en Tecnología CISCO",
-            body: "Potencia el talento de tu equipo",
+            body: "Potencia el talento de tu equipo, \n 100% online.",
             bullets: [
-                "100% online",
                 "Paquetes a medidas.",
                 "CCNA - CCNP",
                 "DevNet / Automation",

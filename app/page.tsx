@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <a href="#" className="fixed bottom-10 right-10 size-10 z-20"><Image src={whatsapp} alt="whatsapp" /></a>
       <section id="home" className="p-10 lg:px-40 py-10 relative bg-nexo-white z-10 font-aeonik min-h-svh">
-        <header className="flex flex-col lg:flex-row gap-5 items-center justify-between text-nexo-black mb-20 text-xl">
+        <header className="flex flex-col lg:flex-row gap-5 items-center justify-between text-nexo-black mb-40 text-xl">
           <ul className="flex items-center justify-between flex-wrap gap-5 lg:gap-10 list-none w-full">
             <li className="move-down"><Image src={logo} loading="eager" alt="Logo" className="h-9 w-auto relative right-10" /></li>
             <div className="flex items-center justify-between gap-5 lg:gap-10 flex-wrap">
@@ -25,8 +25,12 @@ export default function Home() {
           </ul>
         </header>
         <div className="lg:max-w-3/5">
-          <h1 className="text-3xl lg:text-8xl font-medium mb-10 leading-23">Soluciones <br className="hidden md:block" /> que conectan. <br className="hidden md:block" /> Operaciones <br /> que avanzan</h1>
-          <p className="xl:max-w-180 text-xl lg:text-3xl font-normal">Diseñamos, protegemos y hacemos evolucionar <br /> la infraestructura que mantiene en movimiento <br /> a tu organización.</p>
+          <h1 className="text-3xl lg:text-9xl font-medium mb-10 leading-25">
+            Conetar,<br />
+            trasformar,<br />
+            crecer.
+          </h1>
+          <p className="xl:max-w-180 text-xl font-normal leading-tight">Diseñamos, protegemos y hacemos evolucionar <br /> la infraestructura que mantiene en movimiento <br /> a tu organización.</p>
         </div>
       </section >
       <section className="font-aeonik p-10 lg:p-40 bg-nexo-white" id="plataformas">

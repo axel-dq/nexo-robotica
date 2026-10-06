@@ -44,9 +44,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <a href="#" target="_blank" rel="noopener noreferrer" className="h-full">
                   <Image src={linkedinWhite} alt="LinkedIn" className="h-full w-auto" />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="h-full">
+                {/* <a href="#" target="_blank" rel="noopener noreferrer" className="h-full">
                   <Image src={whatsappWhite} alt="WhatsApp" className="h-full w-auto" />
-                </a>
+                </a> */}
               </div>
             </div>
           </footer>
