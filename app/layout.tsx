@@ -8,6 +8,8 @@ import instagram from "@assets/images/instagram.svg";
 import logoWhite from "@assets/images/logo-white.svg";
 import Image from "next/image";
 
+import Link from "next/link";
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="es" className="scroll-smooth">
@@ -23,30 +25,30 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <h2 className="font-bold mb-5 text-xl">Servicios</h2>
                 <ul className="list-none flex flex-col gap-2">
-                  <li className="text-nexo-white/50"><a href="#">Infraestructura, Telecomunicaciones y Tecnología (IT & OT)</a></li>
-                  <li className="text-nexo-white/50"><a href="#">Desarrollo y Soluciones Digitales</a></li>
-                  <li className="text-nexo-white/50"><a href="#">Consultoría y Asesoramiento Legal</a></li>
+                  <li className="text-nexo-white/50"><Link href="#">Infraestructura, Telecomunicaciones y Tecnología (IT & OT)</Link></li>
+                  <li className="text-nexo-white/50"><Link href="#">Desarrollo y Soluciones Digitales</Link></li>
+                  <li className="text-nexo-white/50"><Link href="#">Consultoría y Asesoramiento Legal</Link></li>
                 </ul>
               </div>
               <div>
                 <h2 className="font-bold mb-5 text-xl">nexo.robórtica</h2>
                 <ul className="list-none flex flex-col gap-2">
-                  <li className="text-nexo-white/50"><a href="/">Home</a></li>
-                  <li className="text-nexo-white/50"><a href="/nosotros">Quienes somos</a></li>
-                  <li className="text-nexo-white/50"><a href="/#plataformas">Servicios</a></li>
-                  <li className="text-nexo-white/50"><a href="#footer-social-media">Contactos</a></li>
+                  <li className="text-nexo-white/50"><Link href="/">Home</Link></li>
+                  <li className="text-nexo-white/50"><Link href="/nosotros">Quienes somos</Link></li>
+                  <li className="text-nexo-white/50"><Link href="/#plataformas">Servicios</Link></li>
+                  <li className="text-nexo-white/50"><Link href="#footer-social-media">Contactos</Link></li>
                 </ul>
               </div>
               <div id="footer-social-media" className="flex items-center justify-center gap-4 self-end h-6">
-                <a href="#" target="_blank" rel="noopener noreferrer" className="h-full">
+                <Link href="#" target="_blank" rel="noopener noreferrer" className="h-full">
                   <Image src={instagram} alt="Instagram" className="h-full w-auto" />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer" className="h-full">
+                </Link>
+                <Link href="#" target="_blank" rel="noopener noreferrer" className="h-full">
                   <Image src={linkedinWhite} alt="LinkedIn" className="h-full w-auto" />
-                </a>
-                {/* <a href="#" target="_blank" rel="noopener noreferrer" className="h-full">
+                </Link>
+                {/* <Link href="#" target="_blank" rel="noopener noreferrer" className="h-full">
                   <Image src={whatsappWhite} alt="WhatsApp" className="h-full w-auto" />
-                </a> */}
+                </Link> */}
               </div>
             </div>
           </footer>

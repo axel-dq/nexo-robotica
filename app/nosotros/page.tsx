@@ -9,7 +9,7 @@ import "./page.css";
 export default function Nosotros() {
     return (
         <div className="min-h-svh flex items-center bg-nexo-white p-20">
-            <a className="absolute top-15 right-15 font-bold" href="/">← Volvé a Home</a>
+            <Link className="absolute top-15 right-15 font-bold" href="/">← Volvé a Home</Link>
             <ul className="flex gap-10 p-10 list-none basis-55/100">
                 <li className="flex items-center member">
                     <figure>
@@ -49,7 +49,7 @@ export default function Nosotros() {
                     el desafío, conectar las áreas
                     necesarias y construir soluciones
                     pensadas para avanzar.
-                    <a className="font-bold mt-10 block" href="/proposito-vision-mision">Propósito, Visión y Misión  <span>⟶</span></a>
+                    <Link className="font-bold mt-10 block" href="/proposito-vision-mision">Propósito, Visión y Misión  <span>⟶</span></Link>
                 </p>
             </div>
             <Image src={logo} alt="Logo" loading="eager" className="w-20 absolute bottom-15 right-15" />

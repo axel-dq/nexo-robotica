@@ -6,6 +6,8 @@ import { notFound } from "next/navigation";
 import Image from "next/image";
 import useEmblaCarousel from "embla-carousel-react";
 
+import Link from "next/link";
+
 export default function Platform({ params }: { params: Promise<{ platform: string }> }) {
     const { platform } = use(params);
     const data = platformFeatures.find(p => p.slug === platform);
@@ -153,7 +155,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
                     }}
                 />
             </div>
-            <a href="/#plataformas" className="block w-fit text-nexo-white ml-auto font-bold mb-10 lg:mb-0">← Volvé a plataformas</a>
+            <Link href="/#plataformas" className="block w-fit text-nexo-white ml-auto font-bold mb-10 lg:mb-0">← Volvé a plataformas</Link>
             <Image src={data.logo} alt={data.title!.toString()} className="h-20 w-auto mx-auto" loading="eager" />
 
             <div className="grow flex items-center justify-center w-full">

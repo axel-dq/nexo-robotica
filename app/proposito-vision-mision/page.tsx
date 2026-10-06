@@ -7,11 +7,13 @@ import vision from "@assets/images/vision.png";
 
 import logo from "@assets/images/logo.svg";
 
+import Link from "next/link";
+
 export default function PropositoVisionMision() {
     return (
         <div className="min-h-svh bg-nexo-white flex flex-col justify-stretch items-stretch"
             style={{ backgroundImage: `url(${bgSimple.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "bottom" }}>
-            <a className="absolute top-5 right-10 font-bold" href="/">← Volvé a Home</a>
+            <Link className="absolute top-5 right-10 font-bold" href="/">← Volvé a Home</Link>
             <div className="flex justify-stretch">
                 <Image src={proposito} alt="Propósito" loading="eager" className="w-1/3 object-cover" />
                 <Image src={vision} alt="Visión" loading="eager" className="w-1/3 object-cover" />
