@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 import consorcio from "@assets/images/sectores-servimos/consorcio.webp";
 import ecommerce from "@assets/images/sectores-servimos/ecommerce.webp";
@@ -35,7 +35,7 @@ export default function MorphList() {
             <div className="flex gap-20 items-center justify-start h-full mt-10">
                 <div className="grid h-120 w-auto">
                     {items.map((item, index) => (
-                        <Image
+                        <ExportedImage
                             key={index}
                             src={item.src}
                             alt={item.label}
@@ -53,7 +53,7 @@ export default function MorphList() {
                     ))}
                 </ul>
             </div>
-            <Image src={logo} alt={"Nexo"} className="size-20 ml-auto" />
+            <ExportedImage src={logo} alt={"Nexo"} className="size-20 ml-auto" />
         </div>
     );
 }

@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 import "./page.css";
 import logo from "@assets/images/logo.svg";
 import whatsapp from "@assets/images/whatsapp.svg";
@@ -27,11 +27,11 @@ export default function Home() {
 
   return (
     <>
-      <Link href="#" className="fixed bottom-10 right-10 size-10 z-20"><Image src={whatsapp} alt="whatsapp" loading="eager" /></Link>
+      <Link href="#" className="fixed bottom-10 right-10 size-10 z-20"><ExportedImage src={whatsapp} alt="whatsapp" loading="eager" /></Link>
       <section id="home" className="lg:px-40 lg:py-10 relative bg-nexo-white z-10 font-aeonik min-h-svh">
         <header className="hidden! lg:flex! flex-col lg:flex-row gap-5 items-center justify-between text-nexo-black mb-35 text-xl glass-btn py-5 px-10 rounded-full move-down hover:transform-none! hover:cursor-default!">
           <ul className="flex items-center justify-between flex-wrap gap-5 lg:gap-10 list-none w-full">
-            <li className="move-down"><Image src={logo} loading="eager" alt="Logo" className="h-7 w-auto right-10" /></li>
+            <li className="move-down"><ExportedImage src={logo} loading="eager" alt="Logo" className="h-7 w-auto right-10" /></li>
             <div className="flex items-center justify-between gap-5 lg:gap-10 flex-wrap">
               <li className="move-down"><Link href="/nosotros">Nosotros</Link></li>
               <li className="move-down"><Link href="/#plataformas">Soluciones</Link></li>
@@ -42,7 +42,7 @@ export default function Home() {
         </header>
         <header className="lg:hidden block text-nexo-black mb-20 bg-white text-xl">
           <div className="flex items-center justify-between p-10">
-            <Image src={logo} loading="eager" alt="Logo" className="h-9 w-auto" />
+            <ExportedImage src={logo} loading="eager" alt="Logo" className="h-9 w-auto" />
             <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} style={{ transform: mobileMenuOpen ? 'rotate(-90deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease-in-out' }}>
               <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#000000"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z" /></svg>
             </button>
