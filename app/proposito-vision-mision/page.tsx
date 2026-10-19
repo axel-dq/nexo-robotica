@@ -1,58 +1,51 @@
 import "./page.css";
-import bgSimple from "@assets/images/background-simple.png";
 import Image from "next/image";
-import mision from "@assets/images/mision.png";
-import proposito from "@assets/images/proposito.png";
-import vision from "@assets/images/vision.png";
+import mision from "@assets/images/mision.webp";
+import proposito from "@assets/images/proposito.webp";
+import vision from "@assets/images/vision.webp";
 
 import logo from "@assets/images/logo.svg";
 
 import Link from "next/link";
 
 export default function PropositoVisionMision() {
+    const info = [
+        {
+            title: "Propósito",
+            description: "Transformar la complejidad tecnológica en sistemas unificados, robustos y de impecable claridad estructural.",
+            image: proposito,
+        },
+        {
+            title: "Visión",
+            description: "Consolidarnos como el referente indiscutible en consultoría e infraestructura tecnológica de alta gama, marcando un nuevo estándar corporativo donde la robustez operativa se fusiona con el servicio integral.",
+            image: vision,
+        },
+        {
+            title: "Misión",
+            description: "Acompañar a las organizaciones a través de una consultoría estratégica y técnica de alta gama, diseñando y unificando su infraestructura física y sus ecosistemas digitales bajo un estándar de máxima precisión.",
+            image: mision,
+        },
+    ]
+
     return (
-        <div className="min-h-svh bg-nexo-white flex flex-col justify-stretch items-stretch"
-            style={{ backgroundImage: `url(${bgSimple.src})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "bottom" }}>
-            <Link className="absolute top-5 right-10 font-bold" href="/">← Volvé a Home</Link>
-            <div className="flex justify-stretch">
-                <Image src={proposito} alt="Propósito" loading="eager" className="w-1/3 object-cover" />
-                <Image src={vision} alt="Visión" loading="eager" className="w-1/3 object-cover" />
-                <Image src={mision} alt="Misión" loading="eager" className="w-1/3 object-cover" />
-            </div>
-            <ul className="flex list-none items-start py-15">
-                <li className="flex-1 p-10 fade-up">
-                    <h1 className="text-6xl font-bold mb-10 text-nowrap">Propósito</h1>
-                    <span className="text-6xl font-bold absolute top-11 right-30">{">"}</span>
-                    <p className="text-lg w-4/5 text-balance">
-                        Transformar la complejidad tecnológica
-                        en sistemas unificados, robustos
-                        y de impecable claridad estructural.
-                    </p>
-                </li>
-                <li className="flex-1 p-10 fade-up">
-                    <h1 className="text-6xl font-bold mb-10">Visión</h1>
-                    <span className="text-6xl font-bold absolute top-11 right-30">{">"}</span>
-                    <p className="text-lg w-4/5 text-balance">
-                        Consolidarnos como el referente indiscutible
-                        en consultoría e infraestructura tecnológica
-                        de alta gama, marcando un nuevo estándar
-                        corporativo donde la robustez operativa
-                        se fusiona con el servicio integral.
-                    </p>
-                </li>
-                <li className="flex-1 p-10 fade-up">
-                    <h1 className="text-6xl font-bold mb-10">Misión</h1>
-                    <p className="text-lg w-4/5 text-balance">
-                        Acompañar a las organizaciones
-                        a través de una consultoría estratégica
-                        y técnica de alta gama, diseñando
-                        y unificando su infraestructura física
-                        y sus ecosistemas digitales bajo
-                        un estándar de máxima precisión.
-                    </p>
-                </li>
+        <div className="min-h-svh bg-white flex flex-col justify-stretch items-stretch">
+            <Link className="absolute z-20 top-5 right-10 p-2 px-5 rounded-full bg-black! text-white!" href="/">Volvé a Home</Link>
+            <ul className="flex flex-col lg:flex-row list-none items-stretch justify-center gap-20 grow py-40">
+                {
+                    info.map((item, i) => (
+                        <li key={i} className="w-1/4 fade-up rounded-2xl hover:shadow-sm shadow-[#eeeeee] overflow-clip border border-[#e5e8ef] hover:scale-101 transition-all duration-300 pb-20">
+                            <Image src={item.image} alt={item.title} loading="eager" className="w-full object-cover transition-all duration-300 ease-out" />
+                            <div className="mt-20 px-10">
+                                <h1 className="text-6xl font-bold mb-10 text-nowrap tracking-tighter">{item.title}</h1>
+                                <p className="text-lg font-thin text-balance">
+                                    {item.description}
+                                </p>
+                            </div>
+                        </li>
+                    ))
+                }
             </ul>
-            <Image src={logo} alt="Logo" loading="eager" className="w-20 absolute bottom-10 right-10" />
+            <Image src={logo} alt="Logo" loading="eager" className="w-20 bottom-10 right-10 mb-10 ml-auto mr-10" />
         </div>
     )
 }

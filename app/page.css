@@ -1,7 +1,4 @@
 #home {
-    background-image: url("../assets/images/background.webp");
-    background-size: cover;
-    background-position: center;
     animation: fade-in-left-bg 2s ease-in-out;
     background-repeat: no-repeat;
 }
@@ -10,9 +7,18 @@
     animation: move-down 1s ease-in-out;
 }
 
-.fade-up {
-    animation: fade-up 1s ease-in-out;
-    animation-timeline: view();
+@media (max-width: 768px) {
+    .fade-up {
+        animation: fade-up-mobile 1s ease-in-out;
+        animation-timeline: view();
+    }
+}
+
+@media (min-width: 769px) {
+    .fade-up {
+        animation: fade-up 1s ease-in-out;
+        animation-timeline: view();
+    }
 }
 
 @keyframes fade-in-left-bg {
@@ -37,8 +43,29 @@
     }
 }
 
-
 @keyframes fade-up {
+    0% {
+        opacity: 0;
+        transform: translateY(-4rem);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(0rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(4rem);
+    }
+}
+
+@keyframes fade-up-mobile {
     0% {
         opacity: 0;
         transform: translateY(-4rem);
@@ -47,16 +74,6 @@
     50% {
         opacity: 1;
         transform: translateY(0);
-    }
-
-    75% {
-        opacity: 0;
-        transform: translateY(4rem);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(4rem);
     }
 }
 

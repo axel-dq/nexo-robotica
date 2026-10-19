@@ -26,26 +26,26 @@ const platformFeatures: PlatformFeature[] = [
         color_dark: "color-nexo-blue-200",
         platform_description: [{
             title: "Ingeniería y diseño de proyectos",
-            body: "Convertimos necesidades complejas en soluciones en proyectos claros, implementables y preparados para crecer.",
+            body: "Entendemos lo que necesitás y lo convertimos en un proyecto claro, viable y listo para implementar.",
             bullets: [
-                "Diseño, planificación e implementación de proyectos.",
-                "Auditoría técnica y evaluación de proyectos.",
-                "Soporte técnico y mantenimiento preventivo."
+                "Diseño y planificación de proyectos.",
+                "Auditoría y evaluación técnica.",
+                "Implementación, soporte y mantenimiento preventivo."
             ]
         },
         {
             title: "Telecomunicaciones y conectividad",
-            body: "Diseñamos redes para que personas, equipos y sedes trabajen como una sola operación.",
+            body: "Conectamos personas, equipos y sedes para que todo funcione de forma más simple y coordinada.",
             bullets: [
-                "Diseño, instalación y mantenimiento de redes de telecomunicaciones.",
-                "Certificación, diagnóstico, monitoreo y reparación de fallas.",
+                "Diseño, instalación y mantenimiento de redes.",
+                "Certificación de cableado estructurado.",
                 "Certificación de cableado estructurado.",
                 "Optimización de cobertura Wi-Fi.",
                 "Interconexión de sucursales y sitios remotos."
             ]
         }, {
             title: "Infraestructura IT, OT y redes",
-            body: "Hacemos visible y administrable la infraestrucutra que sostiene el negocio.",
+            body: "Damos visibilidad y control sobre la infraestructura que sostiene tu negocio.",
             bullets: [
                 "Diseño de infraestructura informática.",
                 "Segmentación y administración de redes.",
@@ -68,25 +68,35 @@ const platformFeatures: PlatformFeature[] = [
         },
         {
             title: "Automatización y optimización de procesos",
-            body: "Implementamos soluciones que permiten a las empresas optimizar sus procesos y mejorar su eficiencia operativa.",
+            body: "Simplificamos procesos, reducimos tareas manuales y minimizamos errores operativos.",
             bullets: [
                 "Automatización de procesos y tareas.",
-                "Diseño de flujos de trabajo digitales.",
-                "Gestión digital de documentos.",
+                "Diseño de flujos de trabajos digitales.",
+                "Gestión documental digital.",
                 "Formularios y circuitos de aprobación.",
-                "Integración de herramientas mediante API.",
+                "Integración de herramientas via API.",
                 "Tableros de control e indicadores.",
-                "Reducción de tiempos y errores operativos.",
-
             ]
         }, {
-            title: "Formación en Tecnología CISCO",
-            body: "Potencia el talento de tu equipo, \n 100% online.",
+            title: "Formación en Tecnología Cisco",
+            body: "Capacitá a tu equipo con formación técnica especializada, 100% online.",
             bullets: [
-                "Paquetes a medidas.",
-                "CCNA - CCNP",
-                "DevNet / Automation",
-                "CyberOPs / Cybersecurity."
+                "Programas de capacitación a medida.",
+                "Redes: CCNA y CCNP.",
+                "Automatización: DevNet",
+                "Ciberseguridad: CyberOps."
+            ]
+        }, {
+            title: "Equipamiento e integración tecnológica",
+            body: "Seleccionamos, integramos y ponemos en marcha el equipamiento que necesita cada proyecto.",
+            bullets: [
+                "CCTV y videovigilancia.",
+                "Racks y gabinetes.",
+                "Switches, routers y Access Points.",
+                "Workstations, notebooks y monitores.",
+                "Impresoras y periféricos.",
+                "Fibra óptica y cableado estructurado.",
+                "Servidores, almacenamiento y respaldo energético."
             ]
         }],
     }, {
@@ -118,7 +128,7 @@ const platformFeatures: PlatformFeature[] = [
             bullets: [
                 "Piezas para redes sociales.",
                 "Campañas.",
-                "Comunicacicón visual.",
+                "Comunicación visual.",
                 "Estrategias de contenido.",
                 "Posicionamiento SEO.",
             ]

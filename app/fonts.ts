@@ -36,3 +36,13 @@ export const aeonik = localFont({
     ],
     variable: '--font-aeonik',
 });
+
+export const corporate = localFont({
+    src: [
+        {
+            path: '../public/fonts/Corporate-E-Regular.otf',
+            weight: '400',
+            style: 'normal',
+        }],
+    variable: '--font-corporate',
+});

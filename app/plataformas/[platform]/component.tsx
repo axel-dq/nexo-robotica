@@ -15,8 +15,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
     if (!data) notFound();
 
     const [emblaRef, emblaApi] = useEmblaCarousel({
-        loop: false,
-        align: 'start',
+        align: 'center',
         slidesToScroll: 1,
     });
 
@@ -155,7 +154,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
                     }}
                 />
             </div>
-            <Link href="/#plataformas" className="block w-fit text-nexo-white ml-auto font-bold mb-10 lg:mb-0">← Volvé a plataformas</Link>
+            <Link href="/#plataformas" className="block w-fit p-3 rounded-full text-nexo-white ml-auto font-bold mb-10 lg:mb-0 glass-btn text-sm">Volvé a plataformas</Link>
             <Image src={data.logo} alt={data.title!.toString()} className="h-20 w-auto mx-auto" loading="eager" />
 
             <div className="grow flex items-center justify-center w-full">
@@ -166,7 +165,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
                             {data.platform_description.map((desc, index) => (
                                 <div
                                     key={index}
-                                    className="flex-[0_0_100%] sm:flex-[0_0_calc((100%-1rem)/2)] md:flex-[0_0_calc((100%-2rem)/3)] min-w-0 first:pl-4"
+                                    className={`flex-[0_0_100%] sm:flex-[0_0_calc((100%-1rem)/2)] md:flex-[0_0_calc((100%-2rem)/3)] min-w-0 first:pl-4 transition-all duration-300`}
                                 >
                                     <div className="bg-white p-5 pt-24 md:pt-30 rounded-4xl shadow-md relative text-balance h-full min-h-90">
                                         <h3 className="text-2xl md:text-3xl font-semibold mb-5 w-fit">{desc.title}</h3>
@@ -227,7 +226,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
 
                 {data.platform_description.map((desc, index) => (
                     <dialog key={index} id={`platform-dialog-${index}`}
-                        className="bg-white rounded-4xl px-6 sm:px-10 pt-20 py-10 min-h-90 shadow-md w-11/12 md:w-1/3 max-w-200 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:blur-3xl backdrop:bg-nexo-black/30 starting:scale-0 transition-transform duration-900 scale-100 ease-[cubic-bezier(0.33, 1, 0.68, 1)]"
+                        className="bg-white rounded-4xl px-6 sm:px-10 pt-20 py-10 min-h-90 shadow-md w-11/12 md:w-1/3 max-w-200 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 backdrop:blur-3xl backdrop:bg-nexo-black/30 starting:scale-0 transition-transform duration-400 scale-100 ease-[cubic-bezier(0.25,1,0.5,1)]"
                         ref={addToRefs}>
                         <button className="absolute top-5 right-5 rounded-full size-10 text-3xl text-nexo-white font-bold cursor-pointer border-none boder-0 rotate-45" onClick={() => toggleDialog(index)} style={{ backgroundColor: `var(--${data.color_light})` }}>+</button>
                         <h1 className="text-2xl md:text-3xl font-bold mb-10 max-w-2/3">{desc.title}</h1>
