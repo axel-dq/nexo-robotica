@@ -42,5 +42,5 @@ next-env.d.ts
 
 
 # Image Optimizer
-nextImageExportOptimizer
-next-image-export-optimizer-hashes.json
+# nextImageExportOptimizer
+# next-image-export-optimizer-hashes.json
