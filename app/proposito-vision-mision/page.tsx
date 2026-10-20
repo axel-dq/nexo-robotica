@@ -34,7 +34,7 @@ export default function PropositoVisionMision() {
                 {
                     info.map((item, i) => (
                         <li key={i} className="w-1/4 fade-up rounded-2xl hover:shadow-sm shadow-[#eeeeee] overflow-clip border border-[#e5e8ef] hover:scale-101 transition-all duration-300 pb-20">
-                            <ExportedImage placeholder="blur" src={item.image} alt={item.title} loading="eager" className="w-full object-cover transition-all duration-300 ease-out" />
+                            ExportedImage basePath="/nexo-robotica" placeholder="blur" src={item.image} alt={item.title} loading="eager" className="w-full object-cover transition-all duration-300 ease-out" />
                             <div className="mt-20 px-10">
                                 <h1 className="text-6xl font-bold mb-10 text-nowrap tracking-tighter">{item.title}</h1>
                                 <p className="text-lg font-thin text-balance">
@@ -45,7 +45,7 @@ export default function PropositoVisionMision() {
                     ))
                 }
             </ul>
-            <ExportedImage placeholder="blur" src={logo} alt="Logo" loading="eager" className="w-20 bottom-10 right-10 mb-10 ml-auto mr-10" />
+            ExportedImage basePath="/nexo-robotica" placeholder="blur" src={logo} alt="Logo" loading="eager" className="w-20 bottom-10 right-10 mb-10 ml-auto mr-10" />
         </div>
     )
 }

@@ -18,11 +18,11 @@ export default function Nosotros() {
                 {/* Member 1 */}
                 <li className="flex flex-col justify-center flex-1 member">
                     <figure>
-                        <ExportedImage src={face1} alt="Face 1" className="w-full aspect-4/5 object-cover rounded-4xl" placeholder="blur" loading="eager" />
+                        ExportedImage basePath="/nexo-robotica" src={face1} alt="Face 1" className="w-full aspect-4/5 object-cover rounded-4xl" placeholder="blur" loading="eager" />
                         <figcaption className="text-left text-sm text-nexo-gray mt-5 leading-snug">
                             <b className="text-xl">Ing. Alexander Peraza</b><br />
                             CEO y Gerente General
-                            <a className="cursor-pointer"><ExportedImage placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" /></a>
+                            <a className="cursor-pointer">ExportedImage basePath="/nexo-robotica" placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" /></a>
                         </figcaption>
                     </figure>
                 </li>
@@ -30,11 +30,11 @@ export default function Nosotros() {
                 {/* Member 2 */}
                 <li className="flex flex-col justify-between flex-1 member">
                     <figure className="mb-10">
-                        <ExportedImage placeholder="blur" src={face2} alt="Face 2" className="w-full aspect-4/5 object-cover rounded-4xl" loading="eager" />
+                        ExportedImage basePath="/nexo-robotica" placeholder="blur" src={face2} alt="Face 2" className="w-full aspect-4/5 object-cover rounded-4xl" loading="eager" />
                         <figcaption className="text-left text-sm text-nexo-gray mt-5 leading-snug">
                             <b className="text-xl">Brisa Gonzales</b><br />
                             Directora de Marketing Digital
-                            <a className="cursor-pointer"><ExportedImage placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" /></a>
+                            <a className="cursor-pointer">ExportedImage basePath="/nexo-robotica" placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" /></a>
                         </figcaption>
                     </figure>
                     <h1 className="text-5xl hidden lg:block font-bold tracking-tight">Quienes somos</h1>
@@ -43,11 +43,11 @@ export default function Nosotros() {
                 {/* Member 3 */}
                 <li className="flex flex-col justify-center flex-1 member">
                     <figure>
-                        <ExportedImage placeholder="blur" src={face3} alt="Face 3" className="w-full aspect-4/5 object-cover rounded-4xl object-top" loading="eager" />
+                        ExportedImage basePath="/nexo-robotica" placeholder="blur" src={face3} alt="Face 3" className="w-full aspect-4/5 object-cover rounded-4xl object-top" loading="eager" />
                         <figcaption className="text-left text-sm text-nexo-gray mt-5 leading-snug">
                             <b className="text-xl">Dra. Mirta Vera</b><br />
                             Directora de Asuntos Legales y Compliance (CLO)
-                            <a className="cursor-pointer"><ExportedImage placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" /></a>
+                            <a className="cursor-pointer">ExportedImage basePath="/nexo-robotica" placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" /></a>
                         </figcaption>
                     </figure>
                 </li>
@@ -64,7 +64,7 @@ export default function Nosotros() {
                     <Link className="mt-5 block w-fit px-4 py-2 rounded-full bg-white text-black border border-black font-normal text-sm" href="/proposito-vision-mision">Nuestra filosofía</Link>
                 </p>
             </div>
-            <ExportedImage placeholder="blur" src={logo} alt="Logo" loading="eager" className="w-20 absolute bottom-15 right-15 hidden lg:block" />
+            ExportedImage basePath="/nexo-robotica" placeholder="blur" src={logo} alt="Logo" loading="eager" className="w-20 absolute bottom-15 right-15 hidden lg:block" />
         </div>
     )
 }

@@ -35,12 +35,12 @@ export default function MorphList() {
             <div className="flex gap-20 items-center justify-start h-full mt-10">
                 <div className="grid h-120 w-auto">
                     {items.map((item, index) => (
-                        <ExportedImage
-                            placeholder="blur"
-                            key={index}
-                            src={item.src}
-                            alt={item.label}
-                            className={`col-start-1 row-start-1 h-120 w-auto rounded-4xl transition-opacity duration-500 ease-in-out ${index === activeIndex ? "opacity-100 z-10" : "opacity-0 z-0"}`}
+                        ExportedImage basePath = "/nexo-robotica"
+                            placeholder = "blur"
+                            key = { index }
+                            src = { item.src }
+                            alt = { item.label }
+                            className = {`col-start-1 row-start-1 h-120 w-auto rounded-4xl transition-opacity duration-500 ease-in-out ${index === activeIndex ? "opacity-100 z-10" : "opacity-0 z-0"}`}
                         />
                     ))}
                 </div>
@@ -54,7 +54,7 @@ export default function MorphList() {
                     ))}
                 </ul>
             </div>
-            <ExportedImage placeholder="blur" src={logo} alt={"Nexo"} className="size-20 ml-auto" />
+            ExportedImage basePath="/nexo-robotica" placeholder="blur" src={logo} alt={"Nexo"} className="size-20 ml-auto" />
         </div>
     );
 }
