@@ -36,6 +36,7 @@ export default function MorphList() {
                 <div className="grid h-120 w-auto">
                     {items.map((item, index) => (
                         <ExportedImage
+                            placeholder="blur"
                             key={index}
                             src={item.src}
                             alt={item.label}
@@ -53,7 +54,7 @@ export default function MorphList() {
                     ))}
                 </ul>
             </div>
-            <ExportedImage src={logo} alt={"Nexo"} className="size-20 ml-auto" />
+            <ExportedImage placeholder="blur" src={logo} alt={"Nexo"} className="size-20 ml-auto" />
         </div>
     );
 }

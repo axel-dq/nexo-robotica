@@ -155,7 +155,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
                 />
             </div>
             <Link href="/#plataformas" className="block w-fit p-3 rounded-full text-nexo-white ml-auto font-bold mb-10 lg:mb-0 glass-btn text-sm">Volvé a plataformas</Link>
-            <ExportedImage src={data.logo} alt={data.title!.toString()} className="h-20 w-auto mx-auto" loading="eager" />
+            <ExportedImage placeholder="blur" src={data.logo} alt={data.title!.toString()} className="h-20 w-auto mx-auto" loading="eager" />
 
             <div className="grow flex items-center justify-center w-full">
                 {/* Embla Carousel Container */}
