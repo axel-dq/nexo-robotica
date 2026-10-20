@@ -34,7 +34,7 @@ export default function Home() {
             <li className="move-down"><ExportedImage basePath="/nexo-robotica" placeholder="blur" src={logo} loading="eager" alt="Logo" className="h-7 w-auto right-10" /></li>
             <div className="flex items-center justify-between gap-5 lg:gap-10 flex-wrap">
               <li className="move-down"><Link href="/nosotros">Nosotros</Link></li>
-              <li className="move-down"><Link href="/#plataformas">Soluciones</Link></li>
+              <li className="move-down"><Link href="/#plataformas" onClick={() => document.getElementById('plataformas')?.scrollIntoView({ behavior: "smooth" })}>Soluciones</Link></li>
               <li className="move-down"><Link href="/#footer-social-media">Contacto</Link></li>
             </div>
             <li className="bg-nexo-black text-white px-6 py-2 rounded-full lg:ml-20 move-down text-base"><Link href="#">Cotización Gratis</Link></li>

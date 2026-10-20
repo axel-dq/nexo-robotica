@@ -1,7 +1,7 @@
 .fade-up {
     opacity: 0;
-    animation: fade-up 1.5s ease-in-out forwards;
-    animation-delay: calc(sibling-index() * 200ms);
+    animation: fade-up 1s ease-in-out forwards;
+    animation-delay: calc(sibling-index() * 100ms);
 }
 
 @keyframes fade-up {

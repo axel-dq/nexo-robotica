@@ -33,10 +33,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <h2 className="font-bold mb-5 text-xl text-[#b0b5bf]">nexo.robórtica</h2>
                 <ul className="list-none flex flex-col gap-2">
-                  <li className="text-nexo-white/50"><Link href="/">Home</Link></li>
+                  <li className="text-nexo-white/50"><Link href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</Link></li>
                   <li className="text-nexo-white/50"><Link href="/nosotros">Quienes somos</Link></li>
-                  <li className="text-nexo-white/50"><Link href="/#plataformas">Servicios</Link></li>
-                  <li className="text-nexo-white/50"><Link href="#footer-social-media">Contactos</Link></li>
+                  <li className="text-nexo-white/50"><Link href="/#plataformas" onClick={() => document.getElementById('plataformas')?.scrollIntoView({ behavior: 'smooth' })}>Servicios</Link></li>
                 </ul>
               </div>
               <div id="footer-social-media" className="flex items-center justify-center gap-4 self-end h-6">
@@ -51,6 +50,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </footer>
         </main>
       </body>
-    </html>
+    </html >
   );
 }

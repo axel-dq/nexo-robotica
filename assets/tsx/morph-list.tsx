@@ -26,7 +26,7 @@ export default function MorphList() {
     return (
         <div className="w-full bg-transparent text-nexo-black pl-50 p-20 pb-4">
             <div className="flex justify-between">
-                <h1 className="text-6xl mb-20 font-bold">Sectores <br /> a los que servimos</h1>
+                <h1 className="text-6xl mb-20 tracking-tight font-bold">Sectores <br /> a los que servimos</h1>
                 <div className="flex  opacity-50 gap-2">
                     <div>1 /</div>
                     <p className="text-base text-balance whitespace-pre-wrap font-normal font-corporate">Insfraestructura <br />Telecomunicaciones <br />y Tecnología (IT & OT)</p>

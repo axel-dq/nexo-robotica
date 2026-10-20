@@ -18,7 +18,7 @@ export default function MorphGallery() {
 
     return (
         <div className="relative size-full overflow-hidden font-aeonik h-200 bg-transparent">
-            <h1 className="text-6xl font-regular text-nexo-white mt-10 mx-auto w-fit text-center font-bold relative z-20 tracking-tighter">Como trabajamos</h1>
+            <h1 className="text-6xl font-regular text-nexo-white mt-10 mx-auto w-fit text-center font-bold relative z-20">Como trabajamos</h1>
 
             <div className="absolute inset-0 brightness-75">
                 {images.map((image, index) => (
