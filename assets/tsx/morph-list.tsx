@@ -54,7 +54,7 @@ export default function MorphList() {
                     ))}
                 </ul>
             </div>
-            ExportedImage basePath="/nexo-robotica" placeholder="blur" src={logo} alt={"Nexo"} className="size-20 ml-auto" />
+            <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={logo} alt={"Nexo"} className="size-20 ml-auto" />
         </div>
     );
 }
