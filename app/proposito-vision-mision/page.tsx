@@ -39,7 +39,7 @@ export default function PropositoVisionMision() {
                 {
                     info.map((item, i) => (
                         <li key={i} className="w-full sm:w-[80%] md:w-[45%] lg:w-1/4 fade-up rounded-2xl hover:shadow-sm shadow-[#eeeeee] overflow-clip border border-[#e5e8ef] hover:scale-101 transition-all duration-300 pb-10 lg:pb-20">
-                            <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={item.image} alt={item.title} loading="eager" className="w-full object-cover transition-all duration-300 ease-out" />
+                            <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={item.image} alt={item.title} loading="eager" className="w-full object-cover transition-all duration-300 ease-out" />
                             <div className="mt-8 lg:mt-20 px-6 lg:px-10">
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-10 text-nowrap tracking-tighter">{item.title}</h1>
                                 <p className="text-base md:text-lg font-thin text-balance">
@@ -51,7 +51,7 @@ export default function PropositoVisionMision() {
                 }
             </ul>
 
-            <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={logo} alt="Logo" loading="eager" className="w-16 md:w-20 bottom-5 md:bottom-10 right-5 md:right-10 mb-10 ml-auto mr-5 lg:mr-10" />
+            <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={logo} alt="Logo" loading="eager" className="w-16 md:w-20 bottom-5 md:bottom-10 right-5 md:right-10 mb-10 ml-auto mr-5 lg:mr-10" />
         </div>
     )
 }

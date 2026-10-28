@@ -42,7 +42,8 @@ export default function MorphList() {
 
                 <div className="grid h-64 md:h-96 lg:h-120 w-full md:w-4/5 lg:w-auto">
                     {items.map((item, index) => (
-                        <ExportedImage basePath="/nexo-robotica"
+                        <ExportedImage
+                            basePath={process.env.NEXT_PUBLIC_BASE_PATH}
                             placeholder="blur"
                             key={index}
                             src={item.src}
@@ -64,7 +65,7 @@ export default function MorphList() {
 
             </div>
 
-            <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={logo} alt={"Nexo"} className="size-16 lg:size-20 ml-auto mt-10 lg:mt-0" />
+            <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={logo} alt={"Nexo"} className="size-16 lg:size-20 ml-auto mt-10 lg:mt-0" />
         </div>
     );
 }

@@ -54,14 +54,14 @@ export default function MorphGallery() {
                 {images.map((image, index) => (
                     <div key={index} className={`absolute inset-0 flex items-end justify-center transition-opacity duration-500 ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}>
                         <ExportedImage
-                            basePath="/nexo-robotica"
+                            basePath={process.env.NEXT_PUBLIC_BASE_PATH}
                             placeholder="blur"
                             src={image.src}
                             alt={image.alt}
                             className="absolute inset-0 w-full h-full object-cover hidden lg:block"
                         />
                         <ExportedImage
-                            basePath="/nexo-robotica"
+                            basePath={process.env.NEXT_PUBLIC_BASE_PATH}
                             placeholder="blur"
                             src={image.srcMobile}
                             alt={image.alt}

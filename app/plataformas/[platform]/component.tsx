@@ -159,7 +159,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
                 Volvé a plataformas
             </Link>
 
-            <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={data.logo} alt={data.title!.toString()} className="h-16 md:h-20 w-auto mx-auto" loading="eager" />
+            <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={data.logo} alt={data.title!.toString()} className="h-16 md:h-20 w-auto mx-auto" loading="eager" />
 
             <div className="grow flex flex-col items-center justify-center w-full">
                 {/* Embla Carousel Container */}

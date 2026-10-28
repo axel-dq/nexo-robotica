@@ -27,12 +27,12 @@ export default function Nosotros() {
                 {/* Member 1 */}
                 <li className="flex flex-col justify-center flex-1 md:min-w-[45%] lg:min-w-0 member">
                     <figure>
-                        <ExportedImage basePath="/nexo-robotica" src={face1} alt="Face 1" className="w-full aspect-4/5 object-cover rounded-4xl" placeholder="blur" loading="eager" />
+                        <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} src={face1} alt="Face 1" className="w-full aspect-4/5 object-cover rounded-4xl" placeholder="blur" loading="eager" />
                         <figcaption className="text-left text-sm text-nexo-gray mt-4 md:mt-5 leading-snug">
                             <b className="text-xl">Ing. Alexander Peraza</b><br />
                             CEO y Gerente General
                             <a className="cursor-pointer" href="https://www.linkedin.com/in/jose-alexander-peraza-rodriguez-085224377/" target="_blank" rel="noopener noreferrer">
-                                <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" />
+                                <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" />
                             </a>
                         </figcaption>
                     </figure>
@@ -41,12 +41,12 @@ export default function Nosotros() {
                 {/* Member 2 */}
                 <li className="flex flex-col justify-between flex-1 md:min-w-[45%] lg:min-w-0 member">
                     <figure className="mb-0 lg:mb-10">
-                        <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={face2} alt="Face 2" className="w-full aspect-4/5 object-cover rounded-4xl" loading="eager" />
+                        <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={face2} alt="Face 2" className="w-full aspect-4/5 object-cover rounded-4xl" loading="eager" />
                         <figcaption className="text-left text-sm text-nexo-gray mt-4 md:mt-5 leading-snug">
                             <b className="text-xl">Brisa Gonzalez</b><br />
                             Directora de Marketing Digital
                             <a className="cursor-pointer">
-                                <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" />
+                                <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" />
                             </a>
                         </figcaption>
                     </figure>
@@ -56,11 +56,11 @@ export default function Nosotros() {
                 {/* Member 3 */}
                 <li className="flex flex-col justify-center flex-1 md:min-w-[45%] lg:min-w-0 member">
                     <figure>
-                        <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={face3} alt="Face 3" className="w-full aspect-4/5 object-cover rounded-4xl object-top" loading="eager" />
+                        <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={face3} alt="Face 3" className="w-full aspect-4/5 object-cover rounded-4xl object-top" loading="eager" />
                         <figcaption className="text-left text-sm text-nexo-gray mt-4 md:mt-5 leading-snug">
                             <b className="text-xl">Dra. Mirta Vera</b><br />
                             Directora de Asuntos Legales y Compliance (CLO)
-                            <a className="cursor-pointer"><ExportedImage basePath="/nexo-robotica" placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" /></a>
+                            <a className="cursor-pointer"><ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={linkedin} alt="linkedin" className="size-5 ml-2 inline" /></a>
                         </figcaption>
                     </figure>
                 </li>
@@ -79,7 +79,7 @@ export default function Nosotros() {
                 </p>
             </div>
 
-            <ExportedImage basePath="/nexo-robotica" placeholder="blur" src={logo} alt="Logo" loading="eager" className="w-20 absolute bottom-15 right-15 hidden lg:block" />
+            <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={logo} alt="Logo" loading="eager" className="w-20 absolute bottom-15 right-15 hidden lg:block" />
         </div>
     )
 }
