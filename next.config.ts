@@ -18,7 +18,7 @@ const nextConfig: NextConfig = {
     nextImageExportOptimizer_generateAndUseBlurImages: "true",
     nextImageExportOptimizer_remoteImageCacheTTL: "0",
   },
-  allowedDevOrigins: ['192.168.10.12', '192.168.10.9']
+  allowedDevOrigins: ['192.168.10.12', '192.168.10.9', '192.168.11.11']
 };
 
 export default nextConfig;

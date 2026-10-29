@@ -22,7 +22,7 @@ export default function Home() {
 
   return (
     <>
-      <Link href="https://wa.me/5491164084666" className="fixed bottom-10 right-10 size-10 z-20"><ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} src={whatsapp} alt="whatsapp" placeholder="blur" loading="eager" /></Link>
+      <Link href="https://wa.me/5491164084666" target="_blank" className="fixed bottom-10 right-10 size-10 z-20 contacto"><ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} src={whatsapp} alt="whatsapp" placeholder="blur" loading="eager" /></Link>
       <section id="home" className="lg:px-40 lg:py-10 relative bg-nexo-white z-10  min-h-svh">
 
         {/* Desktop Header */}
@@ -34,7 +34,9 @@ export default function Home() {
               <li className="move-down"><Link href="/#plataformas" onClick={() => document.getElementById('plataformas')?.scrollIntoView({ behavior: "smooth" })}>Soluciones</Link></li>
               <li className="move-down"><Link href="/#contacto" onClick={() => document.getElementById('contacto')?.scrollIntoView({ behavior: "smooth" })}>Contacto</Link></li>
             </div>
-            <li className="bg-nexo-black text-white px-6 py-2 rounded-full lg:ml-20 move-down text-base btn after:bg-nexo-black!"><Link href="#">Cotización Gratis</Link></li>
+            <li className="bg-nexo-black text-white px-6 py-2 rounded-full lg:ml-20 move-down text-base btn after:bg-nexo-black!">
+              <Link href="https://wa.me/5491164084666" target="_blank" rel="noopener noreferrer" className="contacto">Cotización Gratis</Link>
+            </li>
           </ul>
         </header>
 
@@ -50,7 +52,7 @@ export default function Home() {
             <ul className={`flex flex-col items-stretch justify-center gap-5 list-none overflow-hidden bg-nexo-black ${mobileMenuOpen ? 'p-4' : 'p-0'} md:p-6 [&>*:not(:last-child)]:border-b-2 [&>*:not(:last-child)]:border-gray-800 [&>*:not(:last-child)]:pb-4`}>
               <li><Link href="/nosotros" className="size-full block">Nosotros</Link></li>
               <li><Link href="#plataformas" className="size-full block">Soluciones</Link></li>
-              <li><Link href="#footer-social-media" className="size-full block">Contacto</Link></li>
+              <li><Link href="#contacto-msg" className="size-full block">Contacto</Link></li>
             </ul>
           </div>
         </header>
@@ -59,7 +61,7 @@ export default function Home() {
         <div className="px-6 md:px-10 lg:px-0 pb-10 lg:pb-0 flex flex-col lg:flex-row justify-between items-start lg:items-center">
           <div className="w-full lg:w-auto">
             <div className="flex items-center justify-end">
-              <Link href="#" className="text-sm btn w-fit lg:hidden! bg-nexo-black text-white px-3 py-2 rounded-full move-down mb-10 appear-fade after:bg-nexo-black!">
+              <Link href="https://wa.me/5491164084666" target="_blank" rel="noopener noreferrer" className="contacto text-sm btn w-fit lg:hidden! bg-nexo-black text-white px-3 py-2 rounded-full move-down mb-10 appear-fade after:bg-nexo-black!">
                 Cotización Gratis
               </Link>
             </div>

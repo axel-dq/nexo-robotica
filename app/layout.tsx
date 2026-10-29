@@ -8,6 +8,8 @@ import instagram from "@assets/images/instagram.svg";
 import logoWhite from "@assets/images/logo-white.svg";
 import ExportedImage from "next-image-export-optimizer";
 
+
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 import Link from "next/link";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -16,6 +18,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
       </head>
+      <GoogleAnalytics gaId="G-ZNFWTB48T0" />
+      <GoogleTagManager gtmId="GTM-5BNDZQMD" />
       <body className={`m-0 p-0 ${aeonik.variable} ${corporate.variable}`}>
         <main className="flex-1 font-aeonik">
           {children}
@@ -39,10 +43,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </ul>
               </div>
               <div id="footer-social-media" className="flex items-center justify-center gap-4 self-end h-6">
-                <Link href="https://www.instagram.com/nexo.robotica/" target="_blank" rel="noopener noreferrer" className="h-full">
+                <Link href="https://www.instagram.com/nexo.robotica/" target="_blank" rel="noopener noreferrer" className="h-full contacto">
                   <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={instagram} alt="Instagram" className="h-full w-auto" />
                 </Link>
-                <Link href="#" target="_blank" rel="noopener noreferrer" className="h-full">
+                <Link href="#" target="_blank" rel="noopener noreferrer" className="h-full contacto">
                   <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={linkedinWhite} alt="LinkedIn" className="h-full w-auto" />
                 </Link>
               </div>
