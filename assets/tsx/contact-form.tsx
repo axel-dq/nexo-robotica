@@ -31,15 +31,15 @@ export default function ContactForm() {
             <form onSubmit={onSubmit} className="w-full lg:w-1/2 flex flex-col items-center justify-center gap-6 [&_input]:bg-[#b0b5bf] [&_label]:text-nexo-white [&_input]:text-nexo-black [&_input]:text-lg [&_textarea]:bg-[#b0b5bf] [&_textarea]:text-nexo-black [&_textarea]:text-lg [&_textarea]:border [&_input]:border [&_input]:border-[#dfe0e8] [&_textarea]:border-[#dfe0e8]">
                 <div className="w-full">
                     <label htmlFor="nombre">Nombre</label>
-                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" className="w-full p-2 rounded-md mt-2 mb-5 placeholder:brightness-150" />
+                    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre" className="w-full p-2 rounded-md mt-2 mb-5 placeholder:brightness-150" />
                 </div>
                 <div className="w-full">
                     <label htmlFor="correo">Correo</label>
-                    <input type="email" id="correo" name="correo" placeholder="tuCorreo@gmail.com" className="w-full p-2 rounded-md mt-2 mb-5" />
+                    <input type="email" id="correo" name="correo" required placeholder="tuCorreo@gmail.com" className="w-full p-2 rounded-md mt-2 mb-5" />
                 </div>
                 <div className="w-full">
                     <label htmlFor="mensaje">Mensaje</label>
-                    <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." className="w-full p-2 rounded-md mt-2 mb-5 h-50"></textarea>
+                    <textarea id="mensaje" name="mensaje" required placeholder="Escribe tu mensaje aquí..." className="w-full p-2 rounded-md mt-2 mb-5 h-50"></textarea>
                 </div>
                 <p className="text-nexo-white">{result}</p>
                 <div className="text-sm text-[#5e5d5e] flex flex-col gap-2">
@@ -64,7 +64,7 @@ export default function ContactForm() {
                         </label>
                     </div>
                 </div>
-                <button type="submit" disabled={!consentChecked} className="bg-nexo-red-100 px-10 py-2 rounded-full text-2xl font-bold text-center text-nexo-black cursor-pointer hover:brightness-75 transition-all duration-200 btn disabled:cursor-not-allowed disabled:brightness-75 disabled:pointer-events-none contacto">
+                <button id="enviar-formulario" type="submit" disabled={!consentChecked} className="bg-nexo-red-100 px-10 py-2 rounded-full text-2xl font-bold text-center text-nexo-black cursor-pointer hover:brightness-75 transition-all duration-200 btn disabled:cursor-not-allowed disabled:brightness-75 disabled:pointer-events-none contacto">
                     Enviar
                 </button>
             </form>
