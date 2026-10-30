@@ -175,7 +175,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
                                         <h3 className="text-xl md:text-2xl lg:text-3xl font-semibold mb-3 md:mb-5 w-fit">{desc.title}</h3>
                                         <p className="text-gray-700 whitespace-pre-wrap text-sm md:text-base mb-12">{desc.body}</p>
                                         <button
-                                            className="rounded-full size-10 md:size-12 font-bold text-nexo-white text-3xl md:text-4xl absolute bottom-6 right-6 md:bottom-8 md:right-8 cursor-pointer hover:scale-125 transition-transform flex justify-center items-center"
+                                            className="rounded-full size-10 md:size-12 font-bold text-nexo-white text-3xl md:text-4xl absolute bottom-6 right-6 md:bottom-8 md:right-8 cursor-pointer hover:scale-125 transition-transform flex justify-center items-center rotate-45"
                                             style={{ backgroundColor: `var(--${data.color_light})` }}
                                             onClick={() => toggleDialog(index)}
                                         >

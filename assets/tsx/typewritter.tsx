@@ -52,22 +52,24 @@ export default function TypewriterList() {
     ];
 
     return (
-        <ol className="whitespace-pre-wrap flex flex-col justify-around  list-none gap-8">
+        <ol className="whitespace-pre-wrap flex flex-col justify-around list-none gap-8 w-4/5 mx-auto">
             {items.map((item, index) => {
                 // const displayedText = item.content.substring(0, charIndices[index]);
                 return (
                     <li
                         key={index}
-                        className="flex gap-5 text-balance relative"
+                        className="relative hover:[&_.icon]:scale-125"
                     >
-                        <div className="font-bold whitespace-nowrap w-4 relative right-2">{item.icon}</div>
-                        <div className="text-sm">
-                            <h2 className="uppercase font-bold text leading-4">{item.label}</h2>
-                            <div className="font-corporate text-xs">
-                                {item.content}
+                        <Link href={item.link} className="flex gap-5 text-balance relative">
+                            <div className="font-bold whitespace-nowrap w-4 relative right-2 icon transition-transform origin-center">{item.icon}</div>
+                            <div className="text-sm w-fit grow-0 flex flex-col items-start">
+                                <h2 className="uppercase font-bold text leading-4">{item.label}</h2>
+                                <div className="font-corporate text-xs">
+                                    {item.content}
+                                </div>
                             </div>
-                        </div>
-                        <Link className="lg:hidden absolute right-7 top-0 size-6 text-sm bg-nexo-black rounded-full text-nexo-white justify-center items-center flex" href={item.link}>
+                        </Link>
+                        <Link className="absolute left-full top-0 size-6 text-sm bg-nexo-black rounded-full text-nexo-white justify-center items-center flex" href={item.link}>
                             <svg xmlns="http://www.w3.org/2000/svg" height="12px" viewBox="0 -960 960 960" width="12px" fill="#F3F3F3"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" /></svg>
                         </Link>
                     </li>

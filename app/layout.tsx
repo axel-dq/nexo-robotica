@@ -35,7 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 </ul>
               </div>
               <div>
-                <h2 className="font-bold mb-5 text-xl text-[#b0b5bf]">nexo.robórtica</h2>
+                <h2 className="font-bold mb-5 text-xl text-[#b0b5bf]">nexo.robótica</h2>
                 <ul className="list-none flex flex-col gap-2">
                   <li className="text-nexo-white/50"><Link href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</Link></li>
                   <li className="text-nexo-white/50"><Link href="/nosotros">Quienes somos</Link></li>
@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <Link href="https://www.instagram.com/nexo.robotica/" target="_blank" rel="noopener noreferrer" className="h-full contacto">
                   <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={instagram} alt="Instagram" className="h-full w-auto" />
                 </Link>
-                <Link href="#" target="_blank" rel="noopener noreferrer" className="h-full contacto">
+                <Link href="https://www.linkedin.com/in/jose-alexander-peraza-rodriguez-085224377/" target="_blank" rel="noopener noreferrer" className="h-full contacto">
                   <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={linkedinWhite} alt="LinkedIn" className="h-full w-auto" />
                 </Link>
               </div>
