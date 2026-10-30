@@ -42,7 +42,7 @@ export default function PropositoVisionMision() {
                             <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={item.image} alt={item.title} loading="eager" className="w-full object-cover transition-all duration-300 ease-out" />
                             <div className="mt-8 lg:mt-20 px-6 lg:px-10">
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 lg:mb-10 text-nowrap tracking-tighter">{item.title}</h1>
-                                <p className="text-base md:text-lg font-thin text-balance">
+                                <p className="text-base md:text-lg lg:font-thin text-balance">
                                     {item.description}
                                 </p>
                             </div>

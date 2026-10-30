@@ -155,7 +155,7 @@ export default function Platform({ params }: { params: Promise<{ platform: strin
                 />
             </div>
 
-            <Link href="/#plataformas" className="block w-fit p-3 rounded-full text-nexo-white ml-auto font-bold mb-8 md:mb-10 lg:mb-0 glass-btn text-xs md:text-sm">
+            <Link href="/#plataformas" className="btn block bg-white w-fit p-3 rounded-full text-nexo-black ml-auto font-bold mb-8 md:mb-10 lg:mb-0 glass-btn text-xs md:text-sm">
                 Volvé a plataformas
             </Link>
 

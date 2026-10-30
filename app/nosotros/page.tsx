@@ -67,7 +67,7 @@ export default function Nosotros() {
             </ul>
 
             <div className="w-full lg:basis-1/2 lg:self-start px-6 md:px-10 lg:px-0">
-                <p className="md:w-3/4 lg:w-1/2 mx-auto lg:mt-50 text-lg md:text-xl font-thin mb-10 lg:mb-0">
+                <p className="md:w-3/4 lg:w-1/2 mx-auto lg:mt-50 text-lg md:text-xl lg:font-thin mb-10 lg:mb-0">
                     Somos un equipo que combina
                     experiencia, criterio y una mirada
                     integral. Trabajamos cerca de
