@@ -78,7 +78,9 @@ jobs:
       - name: Build with Next.js
         env:
           NEXT_PUBLIC_BASE_PATH: ${{ vars.NEXT_PUBLIC_BASE_PATH_DEV }}
-        run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        run: |
+          echo "Using base path: ${{ vars.NEXT_PUBLIC_BASE_PATH_DEV }}"
+          ${{ steps.detect-package-manager.outputs.runner }} next build
 
       # Fix for GitHub Pages ignoring folders starting with underscores
       - name: Add .nojekyll file
