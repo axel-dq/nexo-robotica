@@ -89,30 +89,6 @@
     initial-value: transparent;
 }
 
-#contact-msg {
-    background-image: linear-gradient(to right, #5b82f0, #9637e9, #bd48a4, var(--color-nexo-red-100));
-    background-clip: text;
-    color: transparent;
-
-    animation: gradient-animation 1s ease-in-out forwards;
-    animation-timeline: view();
-}
-
-@keyframes gradient-animation {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
-
 .appear-fade {
     opacity: 0;
     display: inline-block;

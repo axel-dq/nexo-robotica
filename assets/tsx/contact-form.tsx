@@ -1,5 +1,6 @@
 'use client'
 
+import "@assets/styles/contact-form.css";
 import { useState, useRef } from "react";
 
 export default function ContactForm() {
