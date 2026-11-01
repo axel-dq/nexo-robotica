@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths-ignore:
-      - ".github/workflows/deploy.yml"
+      - ".github/workflows/deploy-dev.yml"
 
 jobs:
   build-and-deploy:
