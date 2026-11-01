@@ -3,8 +3,8 @@ name: Deploy Next.js site to Pages
 on:
   push:
     branches: ["dev"]
-  paths-ignore:
-    - .github/workflows/deploy-dev.yml
+    paths-ignore:
+      - .github/workflows/deploy-dev.yml
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
