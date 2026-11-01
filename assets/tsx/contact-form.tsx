@@ -55,7 +55,7 @@ export default function ContactForm() {
                         <div className={`size-5 border-2 border-nexo-black rounded-sm opacity-100 flex items-center justify-center cursor-pointer ${consentChecked ? 'bg-nexo-blue-100 border-nexo-blue-200' : 'bg-white border-gray-400'}`} onClick={() => setConsentChecked((val) => !val)}>
                             <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#F3F3F3"><path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" /></svg>
                         </div>
-                        <input type="checkbox" id="consentimiento" name="consentimiento" required onClick={() => setConsentChecked((val) => !val)} className="hidden" />
+                        <input type="checkbox" id="consentimiento" name="consentimiento" onClick={() => setConsentChecked((val) => !val)} className="hidden" />
                         <label htmlFor="consentimiento">
                             He leído la{" "}
                             <button className="underline cursor-pointer" onClick={() => privacyPolicyDialogRef.current?.showModal()}>
