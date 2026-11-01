@@ -3,7 +3,7 @@ name: Deploy Next.js to HostingPlus
 on:
   push:
     branches: [ main ]
-  paths_ignore:
+  paths-ignore:
     - .github/workflows/deploy.yml
   workflow_dispatch:
 
