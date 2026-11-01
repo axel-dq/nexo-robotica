@@ -101,14 +101,12 @@ export default function MorphGallery() {
                     ))}
                 </ul>
 
-                {/* Los puntos ahora tienen posición absoluta para no afectar el centrado de los textos */}
-                <div className="absolute bottom-8 left-0 right-0 flex lg:hidden justify-center gap-2 z-20 pointer-events-none">
+                <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2 z-20">
                     {images.map((_, index) => (
                         <button
                             key={index}
                             onClick={() => handleButtonClick(index)}
-                            // pointer-events-auto permite hacer click en los botones aunque el contenedor ignore clicks
-                            className={`h-2 rounded-full transition-all duration-300 pointer-events-auto ${activeIndex === index ? 'w-8 bg-white' : 'w-2 bg-white/40'}`}
+                            className={`h-2 rounded-full transition-all duration-300 cursor-pointer pointer-events-auto ${activeIndex === index ? 'w-8 bg-white' : 'w-2 bg-white/40'}`}
                             aria-label={`Ir a slide ${index + 1}`}
                         />
                     ))}
