@@ -28,7 +28,7 @@ export default function Home() {
         {/* Desktop Header */}
         <header className="hidden! lg:flex! flex-col lg:flex-row gap-5 items-center justify-between text-nexo-black mb-35 text-xl glass-btn py-5 px-10 rounded-full move-down hover:transform-none! hover:cursor-default!">
           <ul className="flex items-center justify-between flex-wrap gap-5 lg:gap-10 list-none w-full">
-            <li className="move-down"><ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={logo} loading="eager" alt="Logo" className="h-7 w-auto right-10" /></li>
+            <li className="move-down"><ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={logo} loading="eager" alt="Logo" className="h-10 w-auto right-10" /></li>
             <div className="flex items-center justify-between gap-5 lg:gap-10 flex-wrap">
               <li className="move-down"><Link href="/nosotros">Nosotros</Link></li>
               <li className="move-down"><Link href="/#plataformas" onClick={() => document.getElementById('plataformas')?.scrollIntoView({ behavior: "smooth" })}>Soluciones</Link></li>

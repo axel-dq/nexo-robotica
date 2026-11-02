@@ -65,7 +65,7 @@ export default function MorphList() {
 
             </div>
 
-            <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={logo} alt={"Nexo"} className="size-16 lg:size-20 ml-auto mt-10 lg:mt-0" />
+            <ExportedImage basePath={process.env.NEXT_PUBLIC_BASE_PATH} placeholder="blur" src={logo} alt={"Nexo"} className="size-16 lg:size-40 ml-auto mt-10 lg:mt-0" />
         </div>
     );
 }
